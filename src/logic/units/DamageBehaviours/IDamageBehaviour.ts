@@ -1,5 +1,3 @@
 export default interface IDamageBehaviour{
-    damageCapacity?: number;
-
-    doDamage(target?: number): number;
+    doDamage(target?: number, capacity?: number): number;
 }
