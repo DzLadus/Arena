@@ -1,13 +1,16 @@
-import IDamageBehaviour from './DamageBehaviours/IDamageBehaviour';
-
 export default class Unit{
     private _healthPoint: number;
     private _initiative: number;
-    protected _damageBehaviour: IDamageBehaviour;
+    private _damageType: string;
+    private _name: string;
+    private _logo: any;
 
-    constructor(healthPoint: number, initiative: number){
-        this.healthPoint = healthPoint;
-        this.initiative = initiative;
+    constructor(healthPoint: number, initiative: number, damageType: string, logo:any, name: string){
+        this._healthPoint = healthPoint;
+        this._initiative = initiative;
+        this._damageType = damageType;
+        this._name = name;
+        this._logo = logo;
     }
 
     public set healthPoint(healthPoint: number){
@@ -19,6 +22,18 @@ export default class Unit{
 
     public get healthPoint(): number{
         return this._healthPoint;
+    }
+
+    public get damageType(): string{
+        return this._damageType;
+    }
+
+    public get name(): string{
+        return this._name;
+    }
+
+    public get logo(): any{
+        return this._logo;
     }
 
     public set initiative(initiative: number){

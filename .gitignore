@@ -20,5 +20,7 @@
 
 npm-debug.log*
 package-lock.json
+debug.txt
+debug.log
 yarn-debug.log*
 yarn-error.log*
