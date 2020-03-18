@@ -27,8 +27,9 @@
 }
 
 .unit-container{
-    width: 500px;
-    height: 200px;
+    position: relative;
+    width: 30%;
+    height: 150px;
     margin: 0 20px 0;
     border: 1px solid black;
     display: flex;
@@ -37,18 +38,86 @@
     align-items: center;
 }
 
-.unit{
-    width: 100px;
-    height: 100px;
+.unit-container:hover{
+    cursor: pointer;
 }
 
-.unit:hover{
-    background-color: brown;
-    cursor: pointer;
+.team1{
+    background-color: lightgray;
+}
+
+.team2{
+    background-color: gray;
+}
+
+.defenced, .paralyzed{
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    height: 30px;
+    width: 30px;
+}
+
+.paralyzed{
+    top: 60px;
+}
+
+.notDefenced, .notParalyzed{
+    display: none;
+}
+
+.unit{
+    width: 120px;
+    height: 80px;
+}
+
+.chosed{
+    border: 5px solid green;
+}
+
+.possible{
+    border: 5px solid red;
+}
+
+.dead {
+    background-color: chartreuse;
 }
 
 .info-container{
     width: 10%;
     height: 100%;
-    background-color: blueviolet;
+    background-color: #8a2be2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.defence{
+    width: 50px;
+    height: 50px;
+}
+
+.defence:hover{
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+.priorityQueue{
+    width: 100%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.nextInQueue{
+    width: 80%;
+    height: 70px;
+    background-color: aquamarine;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
